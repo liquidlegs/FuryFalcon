@@ -1,0 +1,6 @@
+Hi {customer_name} team,
+
+On {current_time} the {my_company} SOC detected an alert that matched the detection criteria {alert_name}
+
+Kind Regards
+{current_loggedin_user}
