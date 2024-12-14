@@ -1,4 +1,6 @@
 from enum import StrEnum
+import os
+import re
 
 
 class EmailFileExtension(StrEnum):
@@ -25,10 +27,75 @@ class EmailFmt():
         self.eml_bcc = eml_bcc
         self.subject_line = subject_line
         self.eml_attachments = eml_attachments
+        self.debug = False
+        self.disable_errors = False
 
 
-    def create_outlook_email(self, file_name: str) -> bool:
-        pass
+    def create_outlook_email(
+            self, 
+            file_name: str, 
+            shw_email: bool = False, 
+            snd_email: bool = False
+        ) -> bool:
+        
+        from win32com import client as win32
+        
+        outlook = win32.Dispatch('Outlook.Application')
+        mail = outlook.CreateItem(0)
+        
+        mail.HTMLBody = self.body
+        mail.To = self.eml_to
+        mail.CC = self.eml_cc
+        mail.BCC = self.eml_bcc
+        mail.Subject = self.subject_line
+        mail.SentOnBehalfOfName = self.eml_from
+
+        for att in self.eml_attachments:
+            if os.path.exists(att) == True:
+                mail.Attachments.Add(att)
+            else:
+                print(f"Error: failed to attach file - path {att} does not exist")
+
+        if shw_email:
+            mail.Display(True)
+            return True
+        
+        elif snd_email:
+            mail.Send()
+            print(f"Successfully sent email with subject {self.subject_line} to {self.eml_to}")
+            return True
+        
+
+        if EmailFmt.is_relative_path(file_name) == True:
+            file_name = f"{os.getcwd()}\\{file_name}"
+
+        self.dprint(file_name)
+        mail.SaveAs(file_name)
+        print(f"Successfully wrote {len(self.body)} bytes to {file_name}")
+        return True
+    
+
+    def dprint(self, message: str):
+        if self.debug == True:
+            print(f"Debug => {message}")
+        else:
+            return
+        
+
+    def eprint(self, message):
+        if self.disable_errors == False:
+            print(f"Error: {message}")
+        else:
+            return
+
+
+    def is_relative_path(file_path: str) -> bool:
+        content = re.search("^[a-zA-Z]:\\.+", file_path)
+
+        if content == None:
+            return True
+        
+        return False
 
 
     def get_full_eml_content(self) -> str:
