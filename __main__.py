@@ -1,6 +1,6 @@
 import argparse
-from src.tiger import Taco
-from src.tiger import BANNER
+from src.falcon import Falcon
+from src.falcon import BANNER
 import sys
 
 def main():
@@ -15,10 +15,12 @@ def main():
     parser.add_argument("-e", "--err", action="store_true")
     parser.add_argument("-o", "--output", action="store")
     parser.add_argument("-c", "--config-file", action="store")
+    parser.add_argument("-s", "--show_email", action="store_true")
+    parser.add_argument("-S", "--send_email", action="store_true")
     parser.add_argument("-n", "--customer_name", action="store")
 
     args = parser.parse_args()
-    taco = Taco(args)
+    taco = Falcon(args)
 
     if args.template != None or args.logic != None:
         taco.parse_input()
