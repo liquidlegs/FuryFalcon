@@ -110,7 +110,7 @@ class Falcon(EmailFmt):
             if data != None and type(data) == str:
                 templ_buffer = templ_buffer.replace(key, data)
 
-        self.body = templ_buffer
+        self.body = templ_buffer.replace("\n", "<br>")
         self.eml_from = data_output["from"]
         self.eml_to = data_output["to"]
         self.eml_cc = data_output["cc"]

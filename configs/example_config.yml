@@ -1,0 +1,159 @@
+customers:
+- name: Nexum Solutions
+  prefix: NXS
+  to:
+  - soc@nexum-solutions.com
+  cc:
+  - Anne.Mitchell@nexum-solutions.com
+  - Max.Avery@nexum-solutions.com
+  - William.Rutherford@nexum-solutions.com
+  - Anne.Lee@nexum-solutions.com
+  - Liam.Slater@nexum-solutions.com
+  - Jasmine.Arnold@nexum-solutions.com
+  - Stewart.Wilson@nexum-solutions.com
+  - Brian.Campbell@nexum-solutions.com
+  - Jan.Russell@nexum-solutions.com
+  - Brian.Hill@nexum-solutions.com
+
+- name: InnoWave Technologies
+  prefix: IWT
+  to:
+  - soc@innoWave-technologies.com
+  cc:
+  - Chloe.Avery@innoWave-technologies.com
+  - Rachel.Ellison@innoWave-technologies.com
+  - Tim.Burgess@innoWave-technologies.com
+  - Hannah.Duncan@innoWave-technologies.com
+  - Max.Alsop@innoWave-technologies.com
+  - Lillian.Russell@innoWave-technologies.com
+  - Natalie.Russell@innoWave-technologies.com
+  - Alan.Howard@innoWave-technologies.com
+  - Virginia.Alsop@innoWave-technologies.com
+  - Audrey.Martin@innoWave-technologies.com
+
+- name: Veridian Dynamics
+  prefix: VDC
+  to:
+  - soc@veridian-dynamics.com
+  cc:
+  - Lillian.Paige@veridian-dynamics.com
+  - Karen.Rampling@veridian-dynamics.com
+  - Sam.James@veridian-dynamics.com
+  - Nicola.Miller@veridian-dynamics.com
+  - Dominic.Hardacre@veridian-dynamics.com
+  - John.Coleman@veridian-dynamics.com
+  - Sebastian.Henderson@veridian-dynamics.com
+  - Sarah.Hart@veridian-dynamics.com
+  - Stephanie.Duncan@veridian-dynamics.com
+  - Matt.Mackay@veridian-dynamics.com
+
+- name: Quantum Nexus
+  prefix: QNX
+  to:
+  - soc@quantum-nexus.com
+  cc:
+  - Alan.Lee@quantum-nexus.com
+  - Joan.Paterson@quantum-nexus.com
+  - Sam.Young@quantum-nexus.com
+  - Sam.Simpson@quantum-nexus.com
+  - Sophie.Vaughan@quantum-nexus.com
+  - Alan.James@quantum-nexus.com
+  - Charles.Campbell@quantum-nexus.com
+  - Joan.Bower@quantum-nexus.com
+  - Owen.Mathis@quantum-nexus.com
+  - Blake.Springer@quantum-nexus.com
+
+- name: Stratosphere Industries
+  prefix: SIS
+  to:
+  - soc@stratosphere-industries.com
+  cc:
+  - Sue.Russell@stratosphere-industries.com
+  - Andrew.Smith@stratosphere-industries.com
+  - Jennifer.Hughes@stratosphere-industries.com
+  - Stephen.Sutherland@stratosphere-industries.com
+  - Karen.Vaughan@stratosphere-industries.com
+  - Blake.Harris@stratosphere-industries.com
+  - Victor.Kerr@stratosphere-industries.com
+  - Keith.Walsh@stratosphere-industries.com
+  - Diana.Nash@stratosphere-industries.com
+  - Connor.Peters@stratosphere-industries.com
+
+- name: AetherWorks
+  prefix: AEW
+  to:
+  - soc@aetherworks.com
+  cc:
+  - Jennifer.Nash@aetherworks.com
+  - Benjamin.Paige@aetherworks.com
+  - Una.Rampling@aetherworks.com
+  - Karen.Peake@aetherworks.com
+  - Megan.Anderson@aetherworks.com
+  - Peter.Walsh@aetherworks.com
+  - Emily.Paige@aetherworks.com
+  - Frank.Langdon@aetherworks.com
+  - Alexander.Davidson@aetherworks.com
+  - Simon.Ellison@aetherworks.com
+
+- name: Circuit Forge
+  prefix: CRF
+  to:
+  - soc@circuit-forge.com
+  cc:
+  - Stewart.Parsons@circuit-forge.com
+  - Michael.Tucker@circuit-forge.com
+  - Leonard.White@circuit-forge.com
+  - Grace.Edmunds@circuit-forge.com
+  - Kimberly.White@circuit-forge.com
+  - Jennifer.Clarkson@circuit-forge.com
+  - Audrey.Campbell@circuit-forge.com
+  - Diane.Wright@circuit-forge.com
+  - Heather.Randall@circuit-forge.com
+  - Peter.Churchill@circuit-forge.com
+
+- name: OptiLink Systems
+  prefix: OPK
+  to:
+  - soc@optiLink-systems.com
+  cc:
+  - Nicola.Lewis@optiLink-systems.com
+  - Amanda.Bell@optiLink-systems.com
+  - Nicola.Glover@optiLink-systems.com
+  - Nathan.Peake@optiLink-systems.com
+  - Eric.Mackenzie@optiLink-systems.com
+  - Victoria.Ross@optiLink-systems.com
+  - Pippa.Ross@optiLink-systems.com
+  - Christian.Berry@optiLink-systems.com
+  - Sue.Bailey@optiLink-systems.com
+  - Charles.Rutherford@optiLink-systems.com
+
+- name: PixelCraft Innovations
+  prefix: PCI
+  to:
+  - soc@pixelCraft-innovations.com
+  cc:
+  - Audrey.Peake@pixelCraft-innovations.com
+  - Adam.McLean@pixelCraft-innovations.com
+  - Stephanie.Bell@pixelCraft-innovations.com
+  - Matt.Thomson@pixelCraft-innovations.com
+  - Edward.Coleman@pixelCraft-innovations.com
+  - Tracey.MacDonald@pixelCraft-innovations.com
+  - Samantha.Taylor@pixelCraft-innovations.com
+  - Michelle.Young@pixelCraft-innovations.com
+  - Joan.Rutherford@pixelCraft-innovations.com
+  
+- name: Synthex Global
+  prefix: SXG
+  to:
+  - soc@synthex-global.com
+  cc:
+  - Bella.Hemmings@synthex-global.com
+  - Fiona.Kelly@synthex-global.com
+  - Colin.Manning@synthex-global.com
+  - Justin.Miller@synthex-global.com
+  - Edward.Carr@synthex-global.com
+  - Evan.Underwood@synthex-global.com
+  - Deirdre.Tucker@synthex-global.com
+  - Joan.Davies@synthex-global.com
+  - Anne.Dickens@synthex-global.com
+  - Chloe.North@synthex-global.com

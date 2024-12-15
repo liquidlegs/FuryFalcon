@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+from platform import system
 
 def eprint(message: str):
     _eprint(message)
@@ -21,9 +22,20 @@ def load_json(data: str) -> dict[str]:
     return _load_json(data)
 
 
-current_user = os.environ.get("USER").capitalize()
-if current_user == None:
-    current_user = ""
+def load_yaml(data: str) -> dict[str]:
+    return _load_yaml(data)
+
+
+user_env = ""
+match system():
+    case "Windows":
+        user_env = "USERNAME"
+    case "Linux":
+        user_env = "USER"
+
+current_user = os.environ.get("USER")
+if current_user != None:
+    current_user = current_user.capitalize()
 
 config = data_input["config_path"]
 customer_name = data_input["customer_name"]
@@ -38,9 +50,14 @@ if customer_name == None:
     exit(1)
 
 buffer = read_file(config)
-data = load_json(buffer)
-customers = check_json_error(data, "customers")
+data = None
 
+if config.endswith(".json"):
+    data = load_json(buffer)
+elif config.endswith(".yml"):
+    data = load_yaml(buffer)
+
+customers = check_json_error(data, "customers")
 if customers == None:
     eprint("no data was found in the customer config file")
     exit(1)
