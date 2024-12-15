@@ -164,5 +164,8 @@ cython_debug/
 requirements.in
 customer*
 test_data*
-configs*
+configs/personal*
 automated*
+test*
+text*
+tasks*

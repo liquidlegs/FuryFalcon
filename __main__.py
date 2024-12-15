@@ -8,7 +8,7 @@ def main():
         if i == "-h" or i == "--help":
             print(BANNER)
 
-    parser = argparse.ArgumentParser(description="none")
+    parser = argparse.ArgumentParser(description="Generate content for repetitive emails")
     parser.add_argument(
         "-t", "--template", 
         action="store", 
