@@ -1,6 +1,7 @@
 from enum import StrEnum
 import os
 import re
+from rich import print
 
 
 class EmailFileExtension(StrEnum):
@@ -54,7 +55,7 @@ class EmailFmt():
             if os.path.exists(att) == True:
                 mail.Attachments.Add(att)
             else:
-                print(f"Error: failed to attach file - path {att} does not exist")
+                self.eprint(f"failed to attach file - path [yellow]{att} [white]does not exist")
 
         if shw_email:
             mail.Display(True)
@@ -62,7 +63,7 @@ class EmailFmt():
         
         elif snd_email:
             mail.Send()
-            print(f"Successfully sent email with subject {self.subject_line} to {self.eml_to}")
+            print(f"[green]Successfully sent email with subject [cyan]{self.subject_line} [green]to [cyan]{self.eml_to}")
             return True
         
 
@@ -71,20 +72,20 @@ class EmailFmt():
 
         self.dprint(file_name)
         mail.SaveAs(file_name)
-        print(f"Successfully wrote {len(self.body)} bytes to {file_name}")
+        print(f"[green]Successfully wrote [yellow]{len(self.body)} [green]bytes to [cyan]{file_name}")
         return True
     
 
     def dprint(self, message: str):
         if self.debug == True:
-            print(f"Debug => {message}")
+            print(f"[red]Debug [cyan]=> [yellow]{message}[/]")
         else:
             return
         
 
     def eprint(self, message):
         if self.disable_errors == False:
-            print(f"Error: {message}")
+            print(f"[red]Error:[/] {message}")
         else:
             return
 

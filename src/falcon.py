@@ -5,6 +5,7 @@ import yaml
 from src.email_fmt import EmailFmt
 from src.email_fmt import EmailFileExtension
 from functools import wraps
+from rich import print
 
 
 RGX_TEMPLATE_VARS = r"{\S+}"
@@ -27,14 +28,18 @@ class Falcon(EmailFmt):
 
     def handle_exceptions(err_message="..."):
         def decorator(func):
+            
             @wraps(func)
             def wrapper(self, *args, **kwargs):
+                
                 try:
                     return func(self, *args, **kwargs)
                 except Exception as e:
                     self.eprint(f"({__name__}) failed with error - {e}")
                     return None
+                
             return wrapper
+
         return decorator
 
 
